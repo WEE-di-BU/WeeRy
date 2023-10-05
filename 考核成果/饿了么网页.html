@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>饿了么</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div class="site-topbar">
+    <div class="bg-[#1E90FF] h-[10rem]">
+      <div class="topbar-nav relative float-left left-[40px]">  
+        <image  src="./饿了么标2.png" width="220px"  height="120px"></image>
+      </div>
+      <div class="topbar-info relative float-right space-x-[10px] right-[50px] top-[60px]">
+        <a class="text-white text-xl"   href="./饿了么登录界面.html" >登录</a>
+        <span class="text-white text-xl">|</span>
+        <a class="text-white text-xl"   href="./饿了么注册界面.html">注册</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-header pt-6">
+    <div class="w-[100vw] h-[50px]">
+      <div class="header-nav relative float-left left-[100px]" >
+        <table >
+          <tr>
+            <td>定位：</td>
+            <td>
+              <select class="border-2 border-[#1E90FF]">
+                <option> </option>
+                <option>云南省</option>
+              </select>
+              <select class="border-2 border-[#1E90FF]">
+                <option> </option>
+                <option>昆明市</option>
+              </select>
+              <select class="border-2 border-[#1E90FF]">
+                <option> </option>
+                <option>五华区</option>
+                <option>官渡区</option>
+                <option>呈贡区</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="float-right relative right-[100px]">
+          <input  type="text" class="border-2 border-[#1E90FF]"  placeholder="请输入商品">
+          <button type="submit"  class="bg-[#1E90FF] w-[60px] h-[44px] text-white float-right">搜索</button>
+      </div>
+    </div>
+  </div>
+  <div class="fixed right-[0px] top-[350px]">
+    <table class="table-auto bg-slate-50 border-separate border-spacing-x-3 border-spacing-y-10  text-center">
+      <tr>
+        <td class="text-gray-500 hover:text-blue-500">购物车</td>
+      </tr>
+      <tr>
+        <td class="text-gray-500 hover:text-blue-500">个人中心</td>
+      </tr>
+      <tr>
+        <td class="text-gray-500 hover:text-blue-500">手机APP</td>
+      </tr>
+      <tr>
+        <td class="text-gray-500 hover:text-blue-500">人工客服</td>
+      </tr>
+    </table>
+  </div>
+  <div class="flex w-[100vw] h-[35px] bg-gray-100 text-center mt-5 divide-x-2 divide-slate-400/25 ">
+    <div class="flex-1 hover:text-blue-500" id="div1" onClick="showContent('content1')">
+      <p class="text-center">美食</p>
+    </div>
+    <div class="flex-1 hover:text-blue-500" id="div3" onClick="showContent('content3')">
+      <p class="text-center">商超便利</p>
+    </div>
+    <div class="flex-1 hover:text-blue-500" id="div2" onClick="showContent('content2')">
+      <p class="text-center">水果</p>
+    </div>
+    <div class="flex-1 hover:text-blue-500" id="div5" onClick="showContent('content4')">
+      <p class="text-center">甜品饮品</p>
+    </div>
+    <div class="flex-1 hover:text-blue-500" id="div6" onClick="showContent('content5')">
+      <p class="text-center">送药上门</p>
+    </div>
+  </div>
+  <div id="content1" class="content  box-border h-[980px] w-[1600px] m-10 p-4 border-4 bg-gray-100">
+    <div class="absolute left-[80px]">
+      <ul class="flex space-x-20">
+        <li class="h-[400px] w-[300px] relative ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://pic2.zhimg.com/v2-f24f0509ca46378a4cec79604d5d683d_r.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">汉中面皮</h1><br>
+            <h1 class="text-center text-2xl">￥8.5  <h1 class="text-center text-xl line-through text-slate-400">￥13</h1></h1>
+            <h1 class="text-center">月售300</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://st-cn.meishij.net/rs/207/11/9502957/n9502957_150582984045373.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">黄焖鸡米饭</h1><br>
+            <h1 class="text-center text-2xl">￥13.5  <h1 class="text-center text-xl line-through text-slate-400">￥20</h1></h1>
+            <h1 class="text-center">月售500</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.ZLthOYuFlZeGeMP1iZnagAHaE8?pid=ImgDet&rs=1" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">傣味手抓饭</h1><br>
+            <h1 class="text-center text-2xl">￥11.5  <h1 class="text-center text-xl line-through text-slate-400">￥18</h1></h1>
+            <h1 class="text-center">月售200</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://www.hsyc518.com/wcs/Upload/201812/5c25cc69b58b0.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">韩式脆皮鸡米饭</h1><br>
+            <h1 class="text-center text-2xl">￥12.5  <h1 class="text-center text-xl line-through text-slate-400">￥17</h1></h1>
+            <h1 class="text-center">月售500</h1>
+          </div>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <ul class="flex space-x-20 ">
+        <li class="h-[400px] w-[300px] relative ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/0195af5ebe4685a801207200fe95ff.jpg@1280w_1l_2o_100sh.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">新疆炒米粉</h1><br>
+            <h1 class="text-center text-2xl">￥13.5  <h1 class="text-center text-xl line-through text-slate-400">￥20</h1></h1>
+            <h1 class="text-center">月售450</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/01348e5fd6afcb11013fdcc71d3d33.jpg@1280w_1l_2o_100sh.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">韩式炸鸡</h1><br>
+            <h1 class="text-center text-2xl">￥15  <h1 class="text-center text-xl line-through text-slate-400">￥25</h1></h1>
+            <h1 class="text-center">月售600</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://cp1.douguo.com/upload/caiku/f/f/5/yuan_ff069580fb05038ebd90869d197e6095.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">成都鱼小二酸菜鱼</h1><br>
+            <h1 class="text-center text-2xl">￥25.5  <h1 class="text-center text-xl line-through text-slate-400">￥35</h1></h1>
+            <h1 class="text-center">月售100</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.NKnzkMZg0baaihk0vTjedgHaE9?pid=ImgDet&rs=1" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">浆水拌汤</h1><br>
+            <h1 class="text-center text-2xl">￥8.5  <h1 class="text-center text-xl line-through text-slate-400">￥14</h1></h1>
+            <h1 class="text-center">月售30</h1>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="content2" class="content hidden box-border h-[980px] w-[1600px] m-10 p-4 border-4 bg-gray-100">
+    <div class="absolute left-[80px]">
+      <ul class="flex space-x-20">
+        <li class="h-[400px] w-[300px] relative ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/01daba5d9c929ba801211d53ade618.jpg@2o.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">阳光玫瑰</h1><br>
+            <h1 class="text-center text-2xl ">￥0.01  <h1 class="text-center text-xl line-through text-slate-400">￥10.8</h1></h1>
+            <h1 class="text-center">月售300</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://tse3-mm.cn.bing.net/th/id/OIP-C.HJTn9Sex9R4EGAyGLfGoPwHaE8?pid=ImgDet&rs=1" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">三拼鲜果</h1><br>
+            <h1 class="text-center text-2xl">￥0.01  <h1 class="text-center text-xl line-through text-slate-400">￥12.8</h1></h1>
+            <h1 class="text-center">月售500</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/019bec5d01c236a801213ec2416a81.jpg@1280w_1l_2o_100sh.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">混合水果捞</h1><br>
+            <h1 class="text-center text-2xl ">￥0.01  <h1 class="text-center text-xl line-through text-slate-400">￥15</h1></h1>
+            <h1 class="text-center">月售200</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img95.699pic.com/photo/50070/6030.jpg_wh300.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">现剥红肉蜜柚</h1><br>
+            <h1 class="text-center text-2xl">￥0.01 <h1 class="text-center text-xl line-through text-slate-400">￥10.8</h1></h1>
+            <h1 class="text-center">月售500</h1>
+          </div>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <ul class="flex space-x-20 ">
+        <li class="h-[400px] w-[300px] relative ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/01cf305af39f4ea801216045607729.png@1280w_1l_2o_100sh.png" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">现切芒果</h1><br>
+            <h1 class="text-center text-2xl">￥0.01  <h1 class="text-center text-xl line-through text-slate-400">￥10.8</h1></h1>
+            <h1 class="text-center">月售450</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://img.zcool.cn/community/017ef45df047fba801219cce4d89ba.jpg@2o.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">现切鲜橙</h1><br>
+            <h1 class="text-center text-2xl">￥0.01 <h1 class="text-center text-xl line-through text-slate-400">￥10.8</h1></h1>
+            <h1 class="text-center">月售600</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://tse1-mm.cn.bing.net/th/id/OIP-C.9tJwxLFbW8aertROIeY0ZwHaFg?pid=ImgDet&rs=1" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">进口香蕉</h1><br>
+            <h1 class="text-center text-2xl">￥0.01  <h1 class="text-center text-xl line-through text-slate-400">￥12.8</h1></h1>
+            <h1 class="text-center">月售100</h1>
+          </div>
+        </li>
+        <li class="h-[400px] w-[300px] ">
+          <div class="h-[400px] w-[300px] p-5 border-2 m-10 bg-white">
+            <a class="m-5">
+              <image src="https://bpic.588ku.com/back_origin_min_pic/19/10/22/09ac0af0623757d12e796af7dd252c29.jpg" width="400px"></image>
+            </a>
+            <h1 class="text-center text-2xl">进口草莓</h1><br>
+            <h1 class="text-center text-2xl">￥0.01 <h1 class="text-center text-xl line-through text-slate-400">￥10.8</h1></h1>
+            <h1 class="text-center">月售30</h1>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="content3" class="content hidden box-border h-[980px] w-[1600px] m-10 p-4 border-4 bg-gray-100">
+    <div class="mx-auto mt-10 bg-white w-[1300px] h-[320px] rounded-lg flex" >
+      <div class="flex-5">
+        <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.3ofqCA9oWa1ly2kYkih6CgAAAA?pid=ImgDet&rs=1"></image>
+      </div>
+      <div class="flex-1">
+        <h1 class="text-2xl">  乐旅便利店</h1>
+        <h1 class="text-gray-400">起送￥25 配送￥2</h1>
+        <h1 class="text-gray-400">月售2000+</h1>
+        <div class="flex">
+          <div class="felx-1 mt-5">
+            <image src="https://cbu01.alicdn.com/img/ibank/2016/759/755/3743557957_600065101.jpg" width="150px"></image>
+            <h1>百岁山矿泉水</h1>
+            <h1>￥2.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://img.cunshop.com/o2o/upload/image/201910/2019070220974_m1_large.jpg" width="150px"></image>
+            <h1>康师傅冰红茶</h1>
+            <h1>￥5.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://imgservice.suning.cn/uimg1/b2c/image/T8QQlYGvEQe5iTP_ygvU6Q.jpg_800w_800h_4e" width="150px"></image>
+            <h1>雪花 勇闯天涯</h1>
+            <h1>￥5.50</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://t00img.yangkeduo.com/goods/images/2019-12-22/c8c75e06-dd96-44f5-a00d-68656094aced.jpg" width="150px"></image>
+            <h1>伊利纯牛奶</h1>
+            <h1>￥2.50</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-20 bg-white w-[1300px] h-[320px] rounded-lg flex" >
+      <div class="flex-5 mt-10 ml-3">
+        <image src="https://img.zcool.cn/community/019d1658de1d5aa801219c77a64310.jpg@1280w_1l_2o_100sh.jpg" width="300px"></image>
+      </div>
+      <div class="flex-1 ml-5">
+        <h1 class="text-2xl"> 全民超市</h1>
+        <h1 class="text-gray-400">起送￥25 配送￥2</h1>
+        <h1 class="text-gray-400">月售2000+</h1>
+        <div class="flex">
+          <div class="felx-1 mt-5">
+            <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.ZnOEXOzRPxpOJno-0_ppDQHaHa?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>维达卫生纸</h1>
+            <h1>￥2.50</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.MHMZjP7nt5seYeRlDJh2pAHaHM?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>潘婷洗发水</h1>
+            <h1>￥35.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/139026/36/3273/163930/5f13bc49Ea6fc5a0c/d98d41b2411ca9a7.jpg!q80.dpg" width="150px"></image>
+            <h1>康师傅红烧牛肉面</h1>
+            <h1>￥2.50</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://tse3-mm.cn.bing.net/th/id/OIP-C.nozElPSSG7mV4lOK2h3CVQHaFj?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>奥利奥</h1>
+            <h1>￥6.50</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content4" class="content hidden box-border h-[1200px] w-[1600px] m-10 p-4 border-4 bg-gray-100">
+    <div class="mx-auto mt-10 bg-white w-[1300px] h-[450px] rounded-lg flex" >
+      <div class="flex-5  mt-10 ml-3">
+        <image src="https://qxb-logo-url-osscache.qixin.com/OriginalUrl/3d47dd80e1742fbccdae93576e162418.jpg" width="300px"></image>
+      </div>
+      <div class="flex-1 ml-10">
+        <h1 class="text-2xl"> 古茗</h1>
+        <h1 class="text-gray-400">起送￥30 配送￥2</h1>
+        <h1 class="text-gray-400">月售2000+</h1>
+        <div class="flex">
+          <div class="felx-1 mt-5">
+            <image src="https://pic.ntimg.cn/file/20210829/2109072_122711276103_2.jpg" width="150px"></image>
+            <h1>芝士莓莓</h1>
+            <h1>￥18.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://tse2-mm.cn.bing.net/th/id/OIP-C.uqhjrFR5RD0Tjq4Gxc7_nAHaLG?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>超A芝士葡萄</h1>
+            <h1>￥19.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://pic.ntimg.cn/file/20200524/2109072_164822526000_2.jpg" width="150px"></image>
+            <h1>杨枝甘露</h1>
+            <h1>￥17.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://pic.ntimg.cn/file/20210414/2109072_125433774100_2.jpg" width="150px"></image>
+            <h1>满杯金菠萝</h1>
+            <h1>￥16.00</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-20 bg-white w-[1300px] h-[450px] rounded-lg flex" >
+      <div class="flex-5 mt-10 ml-3">
+        <image src="https://img.zcool.cn/community/017b505ce01abda801214168aff850.jpg" width="300px"></image>
+      </div>
+      <div class="flex-1 ml-5">
+        <h1 class="text-2xl">瑞幸咖啡</h1>
+        <h1 class="text-gray-400">起送￥30 配送￥2</h1>
+        <h1 class="text-gray-400">月售2000+</h1>
+        <div class="flex">
+          <div class="felx-1 mt-5">
+            <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.yQhF3s9LZA7akGnbjQ1HtwHaNK?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>酱香拿铁</h1>
+            <h1>￥32.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://static.foodtalks.cn/image/shortnews/fc7d9b8c45011f8f9cd119ebded4e7d7e122.png" width="150px"></image>
+            <h1>冰吸生椰拿铁</h1>
+            <h1>￥29.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.Gb5B73FihyGXaUP8KiR6vAHaNK?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>青森苹果丝绒拿铁</h1>
+            <h1>￥29.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://tse4-mm.cn.bing.net/th/id/OIP-C.wgLXs901V86_RUfeY7vJBgHaNK?pid=ImgDet&rs=1" width="150px"></image>
+            <h1>茉莉奶绿瑞纳冰</h1>
+            <h1>￥32.00</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="content5" class="content hidden box-border h-[1200px] w-[1600px] m-10 p-4 border-4 bg-gray-100">
+    <div class="mx-auto mt-20 bg-white w-[1300px] h-[350px] rounded-lg flex" >
+      <div class="flex-5 mt-10 ml-3">
+        <image src="https://img.zcool.cn/community/0313ca36117db2e11013eaf7030aa4a.jpg" width="350px"></image>
+      </div>
+      <div class="flex-1 ml-10 ">
+        <h1 class="text-2xl">天泰药店</h1>
+        <h1 class="text-gray-400">起送￥15 配送￥2</h1>
+        <p class="text-red-400">4.6分</p>
+        <div class="flex">
+          <div class="felx-1 mt-5">
+            <image src="https://img01.miaoshoucdn.com/product/watermark/7/65/7650409c1a204e5dff02d60b89ea8cde.jpg" width="150px"></image>
+            <h1>莲花清瘟</h1>
+            <h1>￥13.00</h1>
+          </div>
+          <div class="felx-1 mt-10 ml-20">
+            <image src="https://img.yaopinnet.com/img500/202006/223380jghovq02we.jpg" width="150px"></image>
+            <h1>复方氨酚烷胺片</h1>
+            <h1>￥14.80</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://image.jianke.com/upload/prodimage/201603wm/2016314162632378.jpg" width="150px"></image>
+            <h1>健胃消食片</h1>
+            <h1>￥10.00</h1>
+          </div>
+          <div class="felx-1 mt-5 ml-20">
+            <image src="https://img05.miaoshoucdn.com/product/watermark/5/4a/54a1c251514678115f0a6921305b0231.jpg" width="150px"></image>
+            <h1>烧伤烫伤膏</h1>
+            <h1>￥21.00</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function showContent(contentId) {
+        // 获取所有内容块的div
+        var contentDivs = document.querySelectorAll('.content');
+
+        // 隐藏所有内容块
+        for (var i = 0; i < contentDivs.length; i++) {
+          contentDivs[i].style.display = 'none';
+        }
+
+        // 根据点击的div显示对应的内容块
+        document.getElementById(contentId).style.display = 'block';
+    }
+</script>
+</body>
+</html>

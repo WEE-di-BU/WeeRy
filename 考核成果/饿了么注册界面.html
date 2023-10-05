@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饿了么用户注册</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="site-topbar">
+        <div class="bg-[#1E90FF] h-[100vh]">
+          <div class="topbar-nav relative float-left left-[80px] top-[150px] hidden xl:block">  
+            <image  src="https://imgo.youxiniao.com/img2022/6/23/8/2022062305747656.jpg" width="700px" ></image>
+          </div>
+          <div class="topbar-info relative float-right right-[100px] top-[65px]">
+            <div class="bg-white w-[600px] h-[700px] rounded-lg">
+                <div class="relative left-[170px]">
+                    <image  src="https://img.sj33.cn/uploads/202010/7-201006093301204.jpg" width="250px" ></image>
+                </div>
+                <div class=" relative left-[250px]">
+                    <a class="text-black text-2xl "   href="./饿了么登录界面.html" >登录</a>
+                    <span class="text-black text-2xl">|</span>
+                    <a class="text-black text-2xl text-blue-400 underline decoration-2 underline-offset-8"   href="./饿了么注册界面.html">注册</a>
+                </div>
+                <div  class=" relative left-[90px] top-[30px] space-y-5 ">
+                    <div>
+                        <input type="text" class="rounded-lg bg-gray-100 border-gray-100 h-[70px] w-[430px]" placeholder="+86 手机号码" >
+                    </div>
+                    <div>
+                        <input type="text" class="rounded-lg bg-gray-100 border-gray-100 h-[70px] w-[340px]" placeholder="输入验证码">
+                        <button type="button" id="generate_captcha" class="h-[70px] w-[90px] bg-gray-100">获取验证码</button>
+                    </div>
+                </div>
+                <div class=" relative top-[60px] left-[90px]">
+                    <input type="checkbox" checked="checked" > 我已阅读并同意  <a href="" target="_blank">用户协议</a>
+                </div>
+                <div class=" relative top-[90px] left-[90px]">
+                    <button type="submit" class="bg-[#1E90FF] rounded-lg h-[60px] w-[430px] text-white text-xl" onClick="window.open('饿了么网页.html')">注册</button>
+                </div>
+                <div class=" relative top-[110px] left-[400px]">
+                    <a href="">没有收到验证码？</a>
+                </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
