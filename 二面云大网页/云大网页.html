@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云南大学YunnanUniversity</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    
+    <div class="bg-cover bg-center bg-local w-full h-[2880px]" style="background-image: url('img/bg.jpg')">
+        <div class="bg-[#1F4AA6] w-full h-[70px] ">
+            <div class="mx-[200px] w-[1302px] pt-[19px]">
+                <div class="grid grid-cols-8 gap-1">
+                    <div class="col-span-3 grid  grid-cols-8 gap-1 ">
+                        <div id="dateDisplay" class="col-span-4 text-white text-xl"></div>
+                        <a class="text-white text-xl" href="">校历</a>
+                        <script>
+                            // 获取当前日期和星期几
+                            const today = new Date();
+                            const options = { weekday: 'long',  year: 'numeric', month: 'long', day: 'numeric' };
+                            const formattedDate = today.toLocaleDateString('zh-CN', options);
+                        
+                            // 显示在页面上
+                            const dateDisplay = document.getElementById('dateDisplay');
+                            dateDisplay.textContent = formattedDate;
+
+                          </script>
+                    </div>
+                    <div class="col-start-5 col-span-2 space-x-[10px]">
+                        <a class="text-white text-xl"   href="" >中文版</a>
+                        <span class="text-white text-xl">|</span>
+                        <a class="text-white text-xl"   href="">ENGLISH</a>
+                        <span class="text-white text-xl">|</span>
+                        <a class="text-white text-xl"   href="">手机版</a>
+                    </div>
+                    <div class="col-end-9 col-span-2 -mt-[5px] flex">
+                        <input  type="text" class="bg-[#4682B4] border-[#4682B4] placeholder-white m-[0px]"  placeholder="输入关键字...">
+                        <button type="submit">
+                            <image src="img/search.png" class="w-[48px] h-[44px]"></image>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div clas="w-full h-[400px]">
+            <div class="mx-[200px] w-[1302px] mt-[50px] flex">
+                <div class="w-[303px] flex-3">
+                    <a href="">
+                        <image src="img/LOGO.png"></image>
+                    </a>
+                </div>
+                <div class="flex-2 mt-[15px] ml-[40px]">
+                    <ul class="grid grid-cols-5 gap-5 text-2xl">
+                        <li class="on underline underline-offset-8 decoration-[#1F4AA6]"><a href="" title="云大首页">云大首页</a></li>
+                        <li><a href="" class="hover:underline underline-offset-8 decoration-[#1F4AA6] " titel="云大新闻">云大新闻</a></li>
+                        <li onmouseover="showLI('u3')" onmouseleave="hideLI('u3')">
+                            <a href="" title="学校概况">学校概况</a>
+                            <ul id="u3" class="content hidden absolute fade-in bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">学校简介</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">历史沿革</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">现任领导</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">历任领导</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">大学章程</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">识别云大</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">全景云大</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u4')" onmouseleave="hideLI('u4')">
+                            <a href="" title="机构设置">机构设置</a>
+                            <ul id="u4" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">职能部门</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">教学科研单位</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">直属附属单位</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u5')" onmouseleave="hideLI('u5')">
+                            <a href="" title="师资队伍">师资队伍</a>
+                            <ul id="u5" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">师资概况</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">人才引进与招聘</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">人才风采</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u6')" onmouseleave="hideLI('u6')">
+                            <a href="" title="人才培养">人才培养</a>
+                            <ul id="u6" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">本科生培养</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">研究生培养</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">国际学生培养</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">继续教育培养</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u7')" onmouseleave="hideLI('u7')">
+                            <a href="" title="科学研究">科学研究</a>
+                            <ul id="u7" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">自然科学研究</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">社会科学研究</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">学术期刊</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u8')" onmouseleave="hideLI('u8')">
+                            <a href="" title="招生就业">招生就业</a>
+                            <ul id="u8" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">本科生招生</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">研究生招生</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">国际学生招生</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">继续培养学生招生</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">就业工作</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u9')" onmouseleave="hideLI('u9')">
+                            <a href="" title="合作交流">合作交流</a>
+                            <ul id="u9" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">合作交流</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">国际交流</a>
+                                    </div>
+                            </ul>
+                        </li>
+                        <li onmouseover="showLI('u10')" onmouseleave="hideLI('u10')">
+                            <a href="" title="校园生活">校园生活</a>
+                            <ul id="u10" class="content hidden absolute bg-[#4F94CD] ml-[-10px] w-[116px] text-center text-white text-sm" >
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div>
+                                        <a href="">团学活动</a>
+                                    </div>
+                                </li>
+                                <li class=" hover:bg-[#4682B4] ">
+                                    <div class="text-center h-[47px]">
+                                        <div class="h-[10px]"></div> 
+                                        <a href="">奖励文化</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <script>
+                            function showLI(showId) {
+                                var showDiv = document.getElementById(showId);
+                    
+                                showDiv.classList.remove('hidden');
+                            }
+                            window.onload = function() {
+                                setTimeout(showLI, 1000); // 延迟1秒后显示列表
+                            }
+                            function hideLI( hideId) {
+                                var hideDiv = document.getElementById(hideId);
+                                
+                                hideDiv.classList.add('hidden'); 
+                            }
+                            window.onload = function() {
+                                setTimeout(hideLI, 1000); // 延迟1秒后显示列表
+                            }  
+                                
+                        </script>
+                    </ul>
+                </div>
+                <div class="flex-4 grid grid-cols-4 gap-3 mt-[15px] ml-[30px]">
+                    <a href="">
+                        <image src="img/02-4.png" class="w-[65px]"></image>
+                    </a>
+                    <a href=""> 
+                        <image src="img/01-4.png" class="w-[65px]"></image>
+                    </a>
+                    <a href="">
+                        <image src="img/03-4.png" class="w-[65px]"></image>
+                    </a>
+                    <a href="">
+                        <image src="img/04-4.png" class="w-[65px]"></image>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mx-[200px] w-[1302px] mt-[30px]">
+                <image src="img/6947633544519.png" class="w-[1240px]"></image>
+            </div>
+            
+        </div>
+
+        <div clas="w-full h-[400px]">
+            <div class="mx-[200px] w-[1302px] mt-[50px] grid grid-cols-11">
+                <div class="col-span-6 relative">
+                    <ul id="list1" class="content grid grid-cols-4 gap-2 space-y-3  absolute bottom-[50px] right-0 ">
+                        <li >
+                            <a>
+                                <image src="img/dote-on.png" class="mt-3"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list2','div2')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list3','div3')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list4','div4')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="list2"  class="content hidden grid grid-cols-4 gap-2  absolute bottom-[50px] right-0 ">
+                        <li>
+                            <a onclick="showContent('list1','div1')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a >
+                                <image src="img/dote-on.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list3','div3')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list4','div4')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="list3" class="content hidden grid grid-cols-4 gap-2 absolute bottom-[50px] right-0 ">
+                        <li>
+                            <a onclick="showContent('list1','div1')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list2','div2')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <image src="img/dote-on.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list4','div4')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="list4" class="content hidden grid grid-cols-4 gap-2  absolute bottom-[75px] right-0 ">
+                        <li>
+                            <a onclick="showContent('list1','div1')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list2','div2')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="showContent('list3','div3')">
+                                <image src="img/dote.png"></image>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <image src="img/dote-on.png"></image>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div id="div1" class="content">
+                        <div>
+                            <image src="img/E80400DA2B32F6283B68DCF679B_9476794F_1D471.jpg"></image>
+                        </div>
+                        <div class="text-center text-lg">
+                            <a href="">西南联合研究生院2023年开学典礼暨院企合作沙龙举行</a>
+                        </div>
+                    </div>
+                    <div id="div2" class="content hidden">
+                        <div>
+                            <image src="img/6A60F5629E07D240C55B10A0D14_53304CCD_39B6E.jpg"></image>
+                        </div>
+                        <div  class="text-center text-lg">
+                            <a href="">云南大学举行2023级新生开学典礼</a>
+                        </div>
+                    </div>
+                    <div id="div3" class="content hidden">
+                        <div>
+                            <image src="img/521812CCE0FE67FF817C6BBC700_0B772F88_266A1.jpg"></image>
+                        </div>
+                        <div class="text-center text-lg">
+                            <a href="">云南大学2023级本科学生军事技能训练总结大会举行</a>
+                        </div>
+                    </div>
+                    <div id="div4" class="content hidden">
+                        <div>
+                            <image src="img/5BCA63E66B30A923D286E4C0A0F_CF353920_1E767.jpg"></image>
+                        </div>
+                        <div class="text-center text-lg">
+                            <a href="">云南省教育部会商会、教育部直属高校在滇定点帮扶十周年座谈会在昆举行 云南省与教育部签署战略合作协议 王宁怀进鹏王予波出席会议并见证签约
+                            </a>
+                        </div>
+                    </div>
+
+                    <script>
+                        function showContent(contentId,contentID) {
+                            // 获取所有内容块的div
+                            var contentDivs = document.querySelectorAll('.content');
+                    
+                            // 隐藏所有内容块
+                            for (var i = 0; i < contentDivs.length; i++) {
+                              contentDivs[i].style.display = 'none';
+                            }
+                    
+                            // 根据点击的div显示对应的内容块
+                            document.getElementById(contentId).style.display = 'block';
+                            document.getElementById(contentID).style.display = 'block';
+                        }
+                    </script>
+                    <script>
+                        let currentList = 1;
+                        let currentDiv = 1;
+                      
+                        function showList(listId) {
+                          document.getElementById(`list${listId}`).classList.remove('hidden');
+                      
+                          // 隐藏之前的列表
+                          document.getElementById(`list${currentList}`).classList.add('hidden');
+                          currentList = listId;
+                        }
+                      
+                        function showDiv(divId) {
+                          document.getElementById(`div${divId}`).classList.remove('hidden');
+                      
+                          // 隐藏之前的 div
+                          document.getElementById(`div${currentDiv}`).classList.add('hidden');
+                          currentDiv = divId;
+                        }
+                      
+                        // 每隔一段时间切换列表和 div 的显示
+                        setInterval(() => {
+                          let nextList = currentList % 4 + 1; // 切换到下一个列表
+                          let nextDiv = currentDiv % 4 + 1; // 切换到下一个 div
+                      
+                          showList(nextList);
+                          showDiv(nextDiv);
+                        }, 2000); // 每 2 秒切换一次
+                      </script>
+                </div>
+
+                <div class="ml-[50px] col-start-7 w-[495px]">
+                    <div class="grid grid-cols-3 gap-1">
+                        <div>
+                            <a href="">
+                                <image src="img/yndtbxlink01.jpg" class="w-[150px] h-[80px]"></image>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <image src="img/CPC20-SMALL-2.png" class="w-[150px] h-[80px]"></image>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="">
+                                <image src="img/weixintupian_20220520101952-1.jpg" class="w-[150px] h-[80px]"></image>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-9 h-[280px]">
+                        <div class="col-span-1 mt-[100px]">
+                            <image src="img/yd.png" class="w-[30px]"></image>
+                        </div>
+                        <div class="col-start-2 col-span-8 mt-[20px]">
+                            <ul class="space-y-2 text-lg">
+                                <li>
+                                    <a href="" class="text-red-600"><b>习近平致信祝贺云南大学建校100周年</b></a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href=""title="孟加拉国达卡大学孔子学院2023年度理事会会议在云南大学召开">孟加拉国达卡大学孔子学院2023年度理事会会议在云...</a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="云南省高校一流党建创建经验交流会议与会人员到云南大学观摩">云南省高校一流党建创建经验交流会议与会人员到...</a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="生态与环境学院陈利项团队在土壤抗生素对作物生产风险的多尺度景观调控方面取得重要进展">
+                                        生态与环境学院陈利项团队在土壤抗生素对作物生产...
+                                    </a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="校领导活动要览(2023年9月)">校领导活动要览(2023年9月)</a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="云南省政协副主席李玛琳到云南大学调研">云南省政协副主席李玛琳到云南大学调研</a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="云南省高等学校高质量发展三年行动计划推出暨本科教育教学工作会在昆召开">
+                                        云南省高等学校高质量发展三年行动计划推出暨本科...
+                                    </a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="香港新华集团客人到访云南大学">香港新华集团客人到访云南大学</a>
+                                </li>
+                                <li class="hover:text-[#1F4AA6] ">
+                                    <a href="" title="于黎研究员、胡靖扬助理研究员在PNAS上报道穿山甲新物种的重要发现">
+                                        于黎研究员、胡靖扬助理研究员在PNAS上报道穿山甲...
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-[70px] mx-[170px]">
+                        <a href="">
+                            <image src="img/more1.png"></image>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div clas="w-full h-[600px]">
+            <div class="mx-[200px] w-[1302px] mt-[50px] grid grid-cols-11">
+                <div class="col-span-6">
+                    <div class="h-[40px]">
+                        <h1 class="relative float-left text-2xl"><b> 教学 · 科研</b></h1>
+                        <a href="" class="relative float-right">更多>></a>
+                    </div>
+                    <div>
+                        <image src="img/line.png" class="relative float-left"></image>
+                        <image src="img/greyline.png" class="relative float-right w-[580px] mt-[5px]"></image>
+                    </div>
+                    <div class="mt-[30px] h-[400px]">
+                        <ul class="text-lg space-y-2">
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" class=" text-red-600" title="【招聘】云南大学诚聘海内外优秀人才"><b>【招聘】云南大学诚聘海内外优秀人才</b>
+                                <span class="relative float-right" href=""><b>2022-01-28</b></span>
+                                </a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6]">
+                                <a href="" class=" text-red-600" title="【招聘】云南大学2023年公开招聘教学科研人员公告"><b>【招聘】云南大学2023年公开招聘教学科研人员公告</b>
+                                <span class="relative float-right"><b>2023-06-12</b></span>
+                                </a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="农业农村部种植业司调研云南大学多年生稻试验示范工作">农业农村部种植业司调研云南大学多年生稻试验示范工作
+                                <span class="relative float-right">2023-10-13</span></a>
+                            </li> 
+                             <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="孟加拉国南北大学孔子学院2023年度理事会会议在云南大学召开">孟加拉国南北大学孔子学院2023年度理事会会议在云南大学召开
+                                <span class="relative float-right">2023-10-13</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="陈剑平院士做客东陆高端学术论坛">陈剑平院士做客东陆高端学术论坛
+                                <span class="relative float-right">2023-10-12</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="商旅学院在第十四届“全国百篇优秀管理案例”评选中再创佳绩">商旅学院在第十四届“全国百篇优秀管理案例”评选中再创佳绩
+                                <span class="relative float-right">2023-10-11</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="生态与环境学院陈利项团队在土壤抗生素对作物生产风险的多尺度景观调控方面取得重要进展">
+                                    生态与环境学院陈利项团队在土壤抗生素对作物生产风险的多尺度景观...
+                                <span class="relative float-right">2023-10-08</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="云大学子在第十八届“挑战杯”“揭榜挂帅”专项赛中获佳绩">云大学子在第十八届“挑战杯”“揭榜挂帅”专项赛中获佳绩
+                                <span class="relative float-right">2023-10-07</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="材料与能源学院彭智利副研究员在碳点基荧光粉研究方向取得系列进展">材料与能源学院彭智利副研究员在碳点基荧光粉研究方向取得系列进展
+                                <span class="relative float-right">2023-10-07</span></a>
+                            </li>
+                            <li>
+                                <a href=""  title="西南天文研究所林伟康深度参与发现M87星系中黑洞喷流周期性进动">西南天文研究所林伟康深度参与发现M87星系中黑洞喷流周期性进动
+                                <span class="relative float-right">2023-09-28</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="云南大学抚仙湖船联队参加“远东杯”国际帆船拉力赛">云南大学抚仙湖船联队参加“远东杯”国际帆船拉力赛
+                                <span class="relative float-right">2023-09-28</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="民族政治研究院朱雄关团队在《中国社会科学(内部文稿)》刊发研究成果">民族政治研究院朱雄关团队在《中国社会科学(内部文稿)》刊发研究成果
+                                <span class="relative float-right">2023-09-28</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="云南大学承办中国教育二号科研计算机网西南地区2023年学术年会">云南大学承办中国教育二号科研计算机网西南地区2023年学术年会
+                                <span class="relative float-right">2023-09-28</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div  class="ml-[50px] col-start-7 w-[495px]">
+                    <div class="h-[40px]">
+                        <h1 class="relative float-left text-2xl"><b> 校园快讯</b></h1>
+                        <a href="" class="relative float-right">更多>></a>
+                    </div>
+                    <div>
+                        <image src="img/line.png" class="relative float-left w-[110px]"></image>
+                        <image src="img/greyline.png" class="relative float-right w-[385px] h-[3px]  mt-[5px]"></image>
+                    </div>
+                    <div class=" mt-7 grid-cols-2 gap-4 h-[200px]  flex">
+                        <div class="bg-gray-100 w-[240px] hover:text-[#1F4AA6] ">
+                            <div>
+                                <image src="img/9293766046EF38154AA8C4E8CE2_4ADE1F6B_20875.jpg" class="w-[240px]"></image>
+                                <div class="m-1">
+                                    <a class="text-lg" href="">云南大学2023年学生社团招新暨社团风采圆满举办</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 w-[240px] hover:text-[#1F4AA6]">
+                            <div>
+                                <image src="img/16EBB8C2B96CD0960E4B36E0EBE_C923FF3E_1BC28.jpg" class="w-[240px]"></image>
+                                <div class="m-1">
+                                    <a class="text-lg" href="">西南联合研究生院2023年开学典礼视频</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-[20px]">
+                        <ul class="space-y-2 text-lg">
+                            <li>
+                                <a href="" class="text-red-600" title="面向广大团员和青年开展学习贯彻习近平新时代中国特色社会主义思想主题教育学习平台">
+                                    面向广大团员和青年开展学习贯彻习近平新时代中国特色社...
+                                </a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""title="云南大学团委在“团中央高校共青团改革沙龙”经验交流">云南大学团委在“团中央高校共青团改革沙龙”经验交流</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="民革云南省委到云南大学调研">民革云南省委到云南大学调研</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="铸牢中华民族共同体意识云南实践研究基地召开第一次座谈会">
+                                    铸牢中华民族共同体意识云南实践研究基地召开第一次座谈会
+                                </a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="南亚东南亚大学联盟华文教育分委员会成立大会举行">南亚东南亚大学联盟华文教育分委员会成立大会举行</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="职能部门“庆国庆·建功立业‘双一流’”乒乓球比赛开赛">职能部门“庆国庆·建功立业‘双一流’”乒乓球比赛开赛</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" title="我校师生组织开展“青春告白祖国 我在云大读中国”读书会">
+                                    我校师生组织开展“青春告白祖国 我在云大读中国”读书会
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div clas="w-full h-[370px]">
+            <div class="mx-[200px] w-[1302px] mt-[50px] grid grid-cols-11">
+                <div class="col-span-6">
+                    <div class="h-[40px]">
+                        <h1 class="relative float-left text-2xl"><b> 媒体云大</b></h1>
+                        <a href="" class="relative float-right">更多>></a>
+                    </div>
+                    <div>
+                        <image src="img/line.png" class="relative float-left"></image>
+                        <image src="img/greyline.png" class="relative float-right w-[580px] mt-[5px]"></image>
+                    </div>
+                    <div class="mt-[30px] h-[300px]">
+                        <ul class="text-lg space-y-2">
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href="" class=" text-red-600" title="【新华社】习近平致信祝贺云南大学建校100周年"><b>【新华社】习近平致信祝贺云南大学建校100周年</b>
+                                <span class="relative float-right" href=""><b>2023-04-20</b></span>
+                                </a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6]">
+                                <a href="" class=" text-red-600" title="【新闻联播】习近平致信祝贺云南大学建校100周年"><b>【新闻联播】习近平致信祝贺云南大学建校100周年</b>
+                                <span class="relative float-right"><b>2023-04-20</b></span>
+                                </a>
+                            </li>                                                                                          
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【央视新闻直播间】丝路画卷·青年说 老挝青年闻鹏宇：中老铁路 我的“圆梦之旅”">【央视新闻直播间】丝路画卷·青年说 老挝青年闻鹏宇：中老铁路 我的“圆...
+                                <span class="relative float-right">2023-10-13</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【新华社】拍张CT,看一下5亿多年前的化石长啥样!">【新华社】拍张CT,看一下5亿多年前的化石长啥样!
+                                <span class="relative float-right">2023-10-12</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【云南日报】云南大学多年生稻科技小院把课堂搬到田间">【云南日报】云南大学多年生稻科技小院把课堂搬到田间
+                                <span class="relative float-right">2023-10-12</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【央广总台】高原帆船队亮相“远东杯”国际帆船赛">【央广总台】高原帆船队亮相“远东杯”国际帆船赛
+                                <span class="relative float-right">2023-10-09</span></a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【光明少年】段昌群：踏遍云南，只为水清山秀天更蓝">【光明少年】段昌群：踏遍云南，只为水清山秀天更蓝
+                                <span class="relative float-right">2023-09-01</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div  class="ml-[50px] col-start-7 w-[495px]">
+                    <div class="h-[40px] grid grid-cols-4 gap-4">
+                        <div id="div1" class="col-span-1" onClick="showContent('content1','content4')">
+                            <a class=" text-2xl"><b>师生风采</b></a>
+                        </div>
+                        <div id="div2" class="col-start-2 col-span-1" onClick="showContent('content2','content5')">
+                            <a class=" text-2xl"><b>影像校园</b></a>
+                        </div>
+                        <div id="div3" class="col-start-3 col-span-1" onClick="showContent('content3','content6')">
+                            <a class="text-2xl"><b>历史记忆</b></a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-3">
+                        <div class="absolute">
+                            <image src="img/greyline.png" class="relative float-right w-[500px] mt-[5px]"></image>
+                        </div>
+                        <div id="content4" class="content col-span-1">
+                            <image src="img/line.png" class="relative float-left w-[110px]"></image>
+                        </div>
+                        <div id="content5" class="content hidden col-start-2 col-span-1">
+                            <image src="img/line.png" class="relative float-left w-[110px]"></image>
+                        </div>
+                        <div id="content6" class="content hidden col-start-3 col-span-1">
+                            <image src="img/line.png" class="relative float-left w-[110px]"></image>
+                        </div>
+                    </div>
+                    <div id="content1" class= " content mt-[20px] h-[300px]">
+                        <ul class="text-lg space-y-2">                                                                                       
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【心之所系在云大】方慧教授">【心之所系在云大】方慧教授</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【您好，教授】唐年胜老师的统计学">【您好，教授】唐年胜老师的统计学</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【您好，教授】柳清菊老师的材料学">【您好，教授】柳清菊老师的材料学</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【您好，教授】张力老师的天文学">【您好，教授】张力老师的天文学</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【人物】国家形象网宣片《PRC》中的云大学子">【人物】国家形象网宣片《PRC》中的云大学子</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【视频】在国家形象网宣片《PRC》中看见云大">【视频】在国家形象网宣片《PRC》中看见云大</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【您好，教授】于黎老师的进化生物学世界">【您好，教授】于黎老师的进化生物学世界</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content2" class= " content hidden mt-[20px] h-[300px]">
+                        <ul class="text-lg space-y-2">                                                                                       
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】四时读书好，探研境界更无垠">【摄影】四时读书好，探研境界更无垠</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】星轨｜于云大深夜邂逅浪漫">【摄影】星轨｜于云大深夜邂逅浪漫</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】花开云大 春意盎然">【摄影】花开云大 春意盎然</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】云大之春|花季已至">【摄影】云大之春|花季已至</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】万花筒 | 遇见万花世界中的云大">【摄影】万花筒 | 遇见万花世界中的云大</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】探寻 | 一叶知“云”">【摄影】探寻 | 一叶知“云”</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【摄影】云大限定配饰集get√">【摄影】云大限定配饰集get√</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="content3" class= " content hidden mt-[20px] h-[300px]">
+                        <ul class="text-lg space-y-2">                                                                                       
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【故事】陈琳教授回忆东陆园爱因斯坦雕像纪念碑背后的故事">【故事】陈琳教授回忆东陆园爱因斯坦雕像纪念碑背后的故事</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【故事】是谁闯进了“一大”会场？">【故事】是谁闯进了“一大”会场？</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="【人物】陈景院士：应学卧薪尝胆，切莫怀安丧志">【人物】陈景院士：应学卧薪尝胆，切莫怀安丧志</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="《朗读云大》第3期——首任校长董泽先生">《朗读云大》第3期——首任校长董泽先生</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="《朗读云大》第2期 —“状元教授”袁嘉谷">《朗读云大》第2期 —“状元教授”袁嘉谷</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="《朗读云大》第1期 —熊庆来先生">《朗读云大》第1期 —熊庆来先生</a>
+                            </li>
+                            <li class="hover:text-[#1F4AA6] ">
+                                <a href=""  title="校庆 | 九十七载云大 | 追求卓越的雄心壮志从未止步">校庆 | 九十七载云大 | 追求卓越的雄心壮志从未止步</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                        function showContent(contentId,contentID) {
+                            // 获取所有内容块的div
+                            var contentDivs = document.querySelectorAll('.content');
+                    
+                            // 隐藏所有内容块
+                            for (var i = 0; i < contentDivs.length; i++) {
+                              contentDivs[i].style.display = 'none';
+                            }
+                    
+                            // 根据点击的div显示对应的内容块
+                            document.getElementById(contentId).style.display = 'block';
+                            document.getElementById(contentID).style.display = 'block';
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+        <div clas="w-full">
+            <div class="mx-[200px] w-[1302px] h-[450px] bg-white rounded-lg ">
+                <div class="h-[40px] mx-5 mt-5">
+                    <h1 class="relative float-left text-lg"><b> 通知公告</b></h1>
+                    <a href="" class="relative float-right">更多>></a>
+                </div>
+                <div >
+                    <image src="img/line.png" class="relative float-left"></image>
+                    <image src="img/greyline.png" class="relative float-right w-[1172px] h-[4px] mt-[5px]"></image>
+                </div>
+                <div  class="mx-5 mt-8">
+                    <ul class="grid grid-cols-2 gap-2 w-[1202px] text-lg space-x-10 ">
+                        <li class="hover:text-[#1F4AA6] ml-10">
+                            <a href="" title="通过企业微信认证登录“云大一卡通”微信小程序使用说明">通过企业微信认证登录 “云大一卡通” 微信小程序使...
+                            <span class="relative float-right">2023-09-04</span></a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href="" title="2023年云南省保密教育实训平台云南大学志愿者招募公告"> 
+                                2023年云南省保密教育实训平台云南大学志愿者招募...
+                            <span class="relative float-right">2023-09-01</span></a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href=""  title="基于企业微信的移动教学服务应用">基于企业微信的移动教学服务应用
+                            <span class="relative float-right">2023-08-24</a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href="" title="云南大学关于公布医药领域腐败问题集中整治举报方式的公告">云南大学关于公布医药领域腐败问题集中整治举报方...
+                            <span class="relative float-right">2023-08-17</span></a>
+                        </li>
+                        <li>
+                            <a href=""  title="后勤服务集团关于2023年暑假保障服务工作安排的通知">后勤服务集团关于2023年暑假保障服务工作安排的通...
+                            <span class="relative float-right">2023-07-07</span></a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href=""  title="电子邮件系统升级通知">电子邮件系统升级通知
+                            <span class="relative float-right">2023-05-31</span></a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href=""  title="关于开展“人人话保密”微视频征集评选活动的通知">关于开展“人人话保密”微视频征集评选活动的通知
+                            <span class="relative float-right">2023-03-15</span></a>
+                        </li>
+                        <li class="hover:text-[#1F4AA6] ">
+                            <a href=""  title="后勤服务集团关于2023年寒假保障服务工作安排的通知">后勤服务集团关于2023年寒假保障服务工作安排的通...
+                            <span class="relative float-right">2023-01-04</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mx-4 mt-[40px] h-[180px]">
+                    <div class=" bg-white border rounded-lg shadow-gray-100 shadow h-[170px]">
+                        <ul class=" grid grid-cols-9 gap-1">
+                            <li class="w-[130px]">
+                                <div class="text-right border-r-4 border-sky-100">
+                                    <div class="text-xl mt-9 mr-8 ">
+                                        <span>网</span><span>上</span><br>
+                                        <span>办</span><span>公</span><br>
+                                        <span>服</span><span>务</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li  onmouseover="toggleDiv('div12', 'div11')" onmouseleave="toggleDiv('div11', 'div12')">
+                                <a href="" class=" w-[137.41px] h-[170px]">
+                                    <div id="div11" class="box ">
+                                        <div class=" mx-8 mt-5" >
+                                            <img src="img/r4-icon1.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px]" >云大邮箱</div>
+                                    </div>
+                                    <div id="div12" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon1-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >云大邮箱</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  onmouseover="toggleDiv('div22', 'div21')" onmouseleave="toggleDiv('div21', 'div22')">
+                                <a href="">
+                                    <div id="div21" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon2.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-center" >信息化服务</div>
+                                    </div>
+                                    <div id="div22" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon2-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >信息化服务</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li  onmouseover="toggleDiv('div32', 'div31')" onmouseleave="toggleDiv('div31', 'div32')">
+                                <a href="">
+                                    <div id="div31" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon3.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-10 mt-[10px] " >图书馆</div>
+                                    </div>
+                                    <div id="div32" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon3-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-10 mt-[10px] text-white" >图书馆</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li onmouseover="toggleDiv('div42', 'div41')" onmouseleave="toggleDiv('div41', 'div42')">
+                                <a href="">
+                                    <div id="div41" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon4.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px]" >财务管理</div>
+                                    </div>
+                                    <div id="div42" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon4-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >财务管理</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li onmouseover="toggleDiv('div52', 'div51')" onmouseleave="toggleDiv('div51', 'div52')">
+                                <a href="">
+                                    <div id="div51" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon5.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-center" >科研创新服务平台</div>
+                                    </div>
+                                    <div id="div52" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon5-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >科研创新服务平台</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li onmouseover="toggleDiv('div62', 'div61')" onmouseleave="toggleDiv('div61', 'div62')">
+                                <a href="">
+                                    <div id="div61" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon6.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-center" >文科科研管理系统</div>
+                                    </div>
+                                    <div id="div62" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon6-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >文科科研管理系统</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li onmouseover="toggleDiv('div72', 'div71')" onmouseleave="toggleDiv('div71', 'div72')">
+                                <a href="">
+                                    <div id="div71" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon7.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-center" >资产业务</div>
+                                    </div>
+                                    <div id="div72" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon7-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >资产业务</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li onmouseover="toggleDiv('div82', 'div81')" onmouseleave="toggleDiv('div81', 'div82')">
+                                <a href="">
+                                    <div id="div81" class="box ">
+                                        <div class="mx-8 mt-5">
+                                            <image src="img/r4-icon8.png" class="w-[70px]"></image>
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-center" >全媒体采编系统</div>
+                                    </div>
+                                    <div id="div82" class="absolute box hidden bg-[#3399cc] w-[137.41px] h-[170px]">
+                                        <div class="mx-8 mt-5">
+                                            <img src="img/r4-icon8-on.png" class="w-[70px]">
+                                        </div>
+                                        <div class="mx-8 mt-[10px] text-white" >全媒体采编系统</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <script>
+                                function toggleDiv(showId, hideId) {
+                                    var showDiv = document.getElementById(showId);
+                                    var hideDiv = document.getElementById(hideId);
+                                
+                                    showDiv.classList.remove('hidden');
+                                    hideDiv.classList.add('hidden'); 
+                                    
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div clas="w-full">
+            <div class="mx-[200px] mt-[40px] w-[1302px] grid grid-cols-9">
+                <div class="col-span-1">
+                    <div>
+                        <image src="img/qr.png" class="w-[100px]"></image>
+                    </div>
+                    <div class="ml-5 mt-3">官方微博</div>
+                </div>
+                <div class="col-start-2 col-span-1">
+                    <div>
+                        <image src="img/qr.png" class="w-[100px]"></image>
+                    </div>
+                    <div class="ml-2 mt-3">微信公众号</div>
+                </div>
+                <div class="col-start-3 col-span-2">
+                    <div>
+                        <image src="img/rsc.png"></image>
+                    </div>
+                    <div>
+                        <image src="img/fp2.png"></image>
+                    </div>
+                </div>
+                <div class="col-start-6 col-span-1">
+                    <ul class=" space-y-2">
+                        <li><a class=""><b>东陆校区</b></a></li>
+                        <li><a class="">昆明市五华区</a></li>
+                        <li><a>翠湖北路2号</a></li>
+                    </ul>
+                </div>
+                <div class="col-start-8 col-span-1 space-y-8">
+                    <ul class=" space-y-2">
+                        <li><a><b>呈贡校区</b></a></li>
+                        <li><a>昆明市呈贡区</a></li>
+                        <li><a>大学城东外环南路</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mx-[200px] w-[1302px] mt-[-10px] grid grid-cols-9">
+                <div class="col-start-7 col-span-3 text-sm">
+                    <ul class="text-sm space-y-4 text-center">
+                        <li>Copyright © 2004- 2023 云南大学 Yunnan University</li>
+                        <li>东陆校区: 昆明市五华区翠湖北路2号 邮编: 650091</li>
+                        <li>呈贡校区：昆明市呈贡区大学城东外环南路 邮编: 650500</li>
+                        <li class="text-lg">
+                            <b>ICP备案号: </b><a href="" class="hover:text-[#1F4AA6]">滇ICP备12004993号-2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
